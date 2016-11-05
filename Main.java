@@ -50,7 +50,7 @@ public class Main {
 			nextY = y + moveTable[i][1];
 			if(gameBoard.isMove(nextX, nextY))
 			{
-				gameBoard.get(nextX, nextY).visited = true;
+				gameBoard.get(nextX, nextY).tick();
 				if(knightsTourRec(nextX, nextY, iter + 1))
 				{
 					moveNum++;
